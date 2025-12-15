@@ -1,22 +1,22 @@
-# Workflow Engine
+# AI Agent Workflow Engine
 
-A lightweight, backend-only workflow engine inspired by systems like LangGraph. [cite_start]This project allows you to define, connect, and execute Python functions ("Nodes") as a stateful graph workflow via HTTP APIs. [cite: 10, 11]
+A lightweight, backend-only workflow engine inspired by systems like LangGraph. This project allows you to define, connect, and execute Python functions ("Nodes") as a stateful graph workflow via HTTP APIs.
 
 ## 🚀 Features
 
-[cite_start]This engine supports the core requirements of an agentic workflow: [cite: 15]
+This engine supports the core requirements of an agentic workflow:
 
-* [cite_start]**Nodes:** Standard Python functions that modify a shared state[cite: 16].
-* [cite_start]**Edges:** Define the sequence of execution (which node runs next)[cite: 19].
-* [cite_start]**Branching:** Conditional routing based on state values (e.g., if `score > 80`, go to End)[cite: 20].
-* [cite_start]**Looping:** Cycles back to previous nodes until a condition is met (e.g., refine code until quality improves)[cite: 21].
-* [cite_start]**State Management:** Passes a data dictionary between steps[cite: 17].
+* **Nodes:** Standard Python functions that modify a shared state.
+* **Edges:** Define the sequence of execution (which node runs next).
+* **Branching:** Conditional routing based on state values (e.g., if `score > 80`, go to End).
+* **Looping:** Cycles back to previous nodes until a condition is met (e.g., refine code until quality improves).
+* **State Management:** Passes a data dictionary between steps.
 
 ## 🛠️ Tech Stack
 
-* [cite_start]**Language:** Python 3.9+ [cite: 4]
-* [cite_start]**Framework:** FastAPI [cite: 29]
-* [cite_start]**Storage:** In-memory dictionary (simulating a database) 
+* **Language:** Python 3.9+
+* **Framework:** FastAPI
+* **Storage:** In-memory dictionary (simulating a database)
 
 ## 📦 Installation & Setup
 
@@ -53,9 +53,9 @@ A lightweight, backend-only workflow engine inspired by systems like LangGraph. 
 You can interact with the API using **Swagger UI** at `http://127.0.0.1:8000/docs` or via **curl/Postman**.
 
 ### 1. Create a Workflow (Code Review Agent)
-[cite_start]**POST** `/graph/create` [cite: 31]
+**POST** `/graph/create`
 
-[cite_start]This example creates a workflow that extracts functions, checks complexity, detects issues, and loops on "suggest_improvements" until the quality score is high enough[cite: 45, 50].
+This example implements the "Code Review Mini-Agent" workflow. It extracts functions, checks complexity, detects issues, and loops on "suggest_improvements" until the quality score is high enough.
 
 ```json
 {
