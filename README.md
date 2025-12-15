@@ -1,4 +1,4 @@
-# AI Agent Workflow Engine
+# Workflow Engine
 
 A lightweight, backend-only workflow engine inspired by systems like LangGraph. This project allows you to define, connect, and execute Python functions ("Nodes") as a stateful graph workflow via HTTP APIs.
 
